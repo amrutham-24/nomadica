@@ -1,0 +1,126 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+    background: #0073e6;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+#search {
+    padding: 10px;
+    width: 50%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#search:focus {
+    width: 60%;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* User Location Box */
+#user-location {
+    background: white;
+    color: #333;
+    padding: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Destination Cards */
+.grid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.destination {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: slideUp 0.5s ease-in-out;
+}
+
+.destination:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.destination img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Buttons */
+button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+/* Distance Text */
+.distance {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    background: #0073e6;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
