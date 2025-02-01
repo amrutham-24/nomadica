@@ -20,11 +20,11 @@ function getUserLocation() {
                 const userLon = position.coords.longitude;
 
                 // Fetch user's location name from OpenStreetMap API
-                fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${userLat}&lon=${userLon}`)
+                fetch(https://nominatim.openstreetmap.org/reverse?format=json&lat=${userLat}&lon=${userLon})
                     .then(response => response.json())
                     .then(data => {
                         // Update location display
-                        document.getElementById("user-location").textContent = `📍 ${data.display_name}`;
+                        document.getElementById("user-location").textContent = 📍 ${data.display_name};
                     });
 
                 // Get all destination elements
@@ -35,7 +35,7 @@ function getUserLocation() {
                     const destLat = parseFloat(dest.dataset.lat);
                     const destLon = parseFloat(dest.dataset.lon);
                     const distance = calculateDistance(userLat, userLon, destLat, destLon);
-                    dest.querySelector(".distance").textContent = `${distance.toFixed(2)} km away`;
+                    dest.querySelector(".distance").textContent = ${distance.toFixed(2)} km away;
                     distances.push({ element: dest, distance: distance });
                 });
 
@@ -59,7 +59,7 @@ function getUserLocation() {
 
 // Function to display place details when the "View Details" button is clicked
 function viewDetails(place) {
-    alert(`More details about ${place} will be added soon!`);
+    alert(More details about ${place} will be added soon!);
 }
 
 // Function to search destinations by name
