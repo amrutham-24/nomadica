@@ -62,6 +62,24 @@ function viewDetails(place) {
     alert(`More details about ${place} will be added soon!`);
 }
 
+// Function to search destinations by name
+document.getElementById("search").addEventListener("keyup", function() {
+    const filter = this.value.toLowerCase(); // Get search query
+    const destinations = document.querySelectorAll(".destination"); // Get all destination cards
+
+    destinations.forEach(dest => {
+        // Get the name of the destination from <h3> tag
+        const destName = dest.querySelector("h3").textContent.toLowerCase();
+        
+        // Show or hide destination based on the search input
+        if (destName.includes(filter)) {
+            dest.style.display = "block"; // Show if it matches
+        } else {
+            dest.style.display = "none"; // Hide if it doesn't match
+        }
+    });
+});
+
 // Initialize on window load
 window.onload = () => {
     getUserLocation(); // Fetch user's location and update distances
