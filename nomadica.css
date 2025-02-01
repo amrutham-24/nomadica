@@ -28,7 +28,11 @@ header {
 }
 
 .logo-container img {
+<<<<<<< HEAD
     height: 50px; /* Adjust logo size */
+=======
+    height: 200px; /* Adjust logo size */
+>>>>>>> fa21642921c402dfeb2002350983435d4c6451ae
     width: auto;
 }
 
@@ -172,4 +176,8 @@ footer {
     #search {
         width: 100%; /* Search input full width on very small screens */
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> fa21642921c402dfeb2002350983435d4c6451ae
